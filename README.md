@@ -1,8 +1,11 @@
-# doccn/ui
+# @srsergio/doccn
 
 > **Universal Geometric Document System & Virtual Pagination Engine for React, Tailwind CSS and CSS Paged Media.**
 
-Inspired by the philosophy of **shadcn/ui**, **doccn** provides **5 Universal Geometric Primitives** with zero aesthetic opinion. Instead of imposing rigid, opinionated templates (`<Invoice>`, `<Brochure>`), `doccn` exposes pure spatial layout abstractions so you can construct any physical or web document using standard HTML5 tags and Tailwind CSS classes.
+[![npm version](https://img.shields.io/badge/npm-@srsergio/doccn@1.0.0-blue.svg)](https://www.npmjs.com/package/@srsergio/doccn)
+[![License: MIT](https://img.shields.io/badge/License-MIT-emerald.svg)](https://opensource.org/licenses/MIT)
+
+Inspired by the philosophy of **shadcn/ui**, **@srsergio/doccn** provides **5 Universal Geometric Primitives** with zero aesthetic opinion. Instead of imposing rigid, opinionated templates (`<Invoice>`, `<Brochure>`), `@srsergio/doccn` exposes pure spatial layout abstractions so you can construct any physical or web document using standard HTML5 tags and Tailwind CSS classes.
 
 ---
 
@@ -11,11 +14,11 @@ Inspired by the philosophy of **shadcn/ui**, **doccn** provides **5 Universal Ge
 ### Installation
 
 ```bash
-bun add doccn
+bun add @srsergio/doccn@1.0.0
 # or
-npm install doccn
+npm install @srsergio/doccn@1.0.0
 # or
-pnpm add doccn
+pnpm add @srsergio/doccn@1.0.0
 ```
 
 ---
@@ -36,7 +39,7 @@ pnpm add doccn
 ## 🚀 Usage Example
 
 ```tsx
-import { Sheet, Frame, ScaleToFit, Pin, Watermark } from 'doccn';
+import { Sheet, Frame, ScaleToFit, Pin, Watermark } from '@srsergio/doccn';
 
 export function InvoiceDocument() {
   return (
@@ -62,16 +65,12 @@ export function InvoiceDocument() {
 
 ---
 
-## 📄 CLI Usage
+## 🤖 AI & LLM Integration
 
-Install primitives directly into your repository:
-
-```bash
-bun run doccn add sheet frame fold pin
-```
+This repository includes a dedicated [`llms.md`](./llms.md) guide designed for AI coding assistants (GPT-4o, Claude, Cursor, Antigravity) to generate pixel-perfect documents with `@srsergio/doccn` with zero hallucinations.
 
 ---
 
 ## 📄 License
 
-MIT © doccn
+MIT © [srsergio](https://github.com/srsergi0)

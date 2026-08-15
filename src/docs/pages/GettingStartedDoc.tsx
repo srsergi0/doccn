@@ -8,13 +8,13 @@ export const GettingStartedDoc: React.FC = () => {
       <div className="mb-8 border-b border-slate-800 pb-6">
         <div className="flex items-center gap-2 text-indigo-400 text-xs font-mono mb-2">
           <Sparkles className="w-4 h-4" />
-          <span>DOCUMENTACIÓN OFICIAL DOC CN</span>
+          <span>DOCUMENTACIÓN OFICIAL @srsergio/doccn@1.0.0</span>
         </div>
         <h1 className="text-3xl font-bold text-white tracking-tight font-serif">
           Introducción & Filosofía de Diseño
         </h1>
         <p className="mt-3 text-slate-300 text-base leading-relaxed">
-          <strong>doccn</strong> es un sistema de diseño de documentos y motor de paginación virtual estilo <em>shadcn/ui</em> para React, Tailwind CSS, KaTeX y CSS Paged Media.
+          <strong>@srsergio/doccn</strong> es un sistema de diseño de documentos y motor de paginación virtual estilo <em>shadcn/ui</em> para React, Tailwind CSS y CSS Paged Media.
         </p>
       </div>
 
@@ -23,7 +23,7 @@ export const GettingStartedDoc: React.FC = () => {
         <strong className="text-white block font-bold mb-1">
           💡 Cero Componentes Rígidos (Zero Opinion Architecture)
         </strong>
-        HTML y Figma triunfaron porque no tienen etiquetas rígidas para "blogs" o "tiendas", sino primitivas espaciales universales. <strong>doccn</strong> no impone componentes cerrados (como &lt;Invoice&gt; o &lt;Brochure&gt;); provee <strong>5 Primitivas Geométricas Universales</strong> y deja que construyas cualquier documento usando HTML5 y clases estándar de Tailwind CSS.
+        HTML y Figma triunfaron porque no tienen etiquetas rígidas para "blogs" o "tiendas", sino primitivas espaciales universales. <strong>@srsergio/doccn</strong> no impone componentes cerrados; provee <strong>5 Primitivas Geométricas Universales</strong> y deja que construyas cualquier documento usando HTML5 y clases estándar de Tailwind CSS.
       </div>
 
       {/* Feature Highlights Grid */}
@@ -57,16 +57,16 @@ export const GettingStartedDoc: React.FC = () => {
 
       <div className="space-y-4">
         <div>
-          <div className="text-xs text-slate-400 mb-1 font-mono">1. Instalar dependencias con Bun:</div>
+          <div className="text-xs text-slate-400 mb-1 font-mono">1. Instalar la librería desde NPM:</div>
           <div className="bg-slate-950 p-3 rounded border border-slate-800 font-mono text-xs text-indigo-300">
-            bun add katex lucide-react clsx tailwind-merge
+            bun add @srsergio/doccn@1.0.0
           </div>
         </div>
 
         <div>
-          <div className="text-xs text-slate-400 mb-1 font-mono">2. Agregar primitivas con el CLI doccn:</div>
+          <div className="text-xs text-slate-400 mb-1 font-mono">2. Importar y usar primitivas directamente:</div>
           <div className="bg-slate-950 p-3 rounded border border-slate-800 font-mono text-xs text-emerald-400">
-            bun run doccn add sheet frame flow fold pin scaletofit
+            import &#123; Sheet, Frame, Flow, Fold, Pin, ScaleToFit, Watermark &#125; from '@srsergio/doccn';
           </div>
         </div>
       </div>

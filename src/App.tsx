@@ -38,7 +38,7 @@ export function App() {
   };
 
   const copyCli = () => {
-    navigator.clipboard.writeText('bun run doccn add sheet frame fold pin');
+    navigator.clipboard.writeText('bun add @srsergio/doccn@1.0.0');
     setCopiedCli(true);
     setTimeout(() => setCopiedCli(false), 2000);
   };
@@ -57,7 +57,7 @@ export function App() {
                 doccn<span className="text-amber-400">/ui</span>
               </span>
               <span className="px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-300 text-[10px] font-mono border border-amber-500/30">
-                v1.0.0 &bull; Complete Studio Catalog
+                @srsergio/doccn@1.0.0
               </span>
             </div>
           </div>
@@ -70,7 +70,7 @@ export function App() {
             className="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-md bg-slate-900 hover:bg-slate-800 text-slate-300 text-xs font-mono border border-slate-800 transition-colors"
           >
             <Terminal className="w-3.5 h-3.5 text-amber-400" />
-            <span>bun run doccn add sheet frame fold pin</span>
+            <span>bun add @srsergio/doccn@1.0.0</span>
             {copiedCli ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5 text-slate-500" />}
           </button>
 

@@ -1,5 +1,5 @@
 {
-  "name": "doccn",
+  "name": "@srsergio/doccn",
   "version": "1.0.0",
   "description": "Universal Geometric Document System & Virtual Pagination Engine for React, Tailwind CSS and CSS Paged Media",
   "license": "MIT",
@@ -23,7 +23,9 @@
   "files": [
     "dist",
     "bin",
-    "README.md"
+    "README.md",
+    "llms.md",
+    "skills"
   ],
   "scripts": {
     "dev": "vite",

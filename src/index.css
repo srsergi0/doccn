@@ -1,0 +1,120 @@
+@import "tailwindcss";
+@import "katex/dist/katex.min.css";
+
+@theme {
+  --font-serif: "Latin Modern Roman", "Cambria", "Georgia", serif;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+
+  --spacing-a4-w: 210mm;
+  --spacing-a4-h: 297mm;
+  --spacing-letter-w: 8.5in;
+  --spacing-letter-h: 11in;
+  --spacing-margin-academic: 25mm;
+
+  --text-doc-xs: 8pt;
+  --text-doc-sm: 9.5pt;
+  --text-doc-base: 11pt;
+  --text-doc-lg: 13pt;
+  --text-doc-title: 22pt;
+}
+
+/* Studio Environment (Dark background for studio UI) */
+:root {
+  font-family: var(--font-sans);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0f172a;
+  color: #f8fafc;
+  min-height: 100vh;
+}
+
+/* Enforce Light Color Scheme & Dark Text on Paper Sheets */
+.print-page,
+[data-doc-root],
+.doc-sheet {
+  color-scheme: light !important;
+  color: #0f172a !important;
+}
+
+.print-page *,
+[data-doc-root] *,
+.doc-sheet * {
+  border-color: rgba(148, 163, 184, 0.3);
+}
+
+/* Print / Paged Media overrides */
+@media print {
+  body {
+    background: transparent !important;
+    color: #000 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-page {
+    box-shadow: none !important;
+    margin: 0 !important;
+    page-break-after: always;
+    break-after: page;
+    color: #000 !important;
+  }
+
+  @page {
+    margin: 0;
+  }
+}
+
+/* Custom Utilities for Document Engine */
+.break-inside-avoid {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.break-before-page {
+  break-before: page;
+  page-break-before: always;
+}
+
+.break-after-page {
+  break-after: page;
+  page-break-after: always;
+}
+
+/* KaTeX custom tuning for document environment */
+.katex,
+.katex-display {
+  color: inherit !important;
+}
+
+.katex-display {
+  margin: 0.75em 0 !important;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* Scrollbar styling for studio */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.6);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.4);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.6);
+}

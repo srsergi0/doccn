@@ -1,0 +1,57 @@
+{
+  "name": "doccn",
+  "version": "1.0.0",
+  "description": "Universal Geometric Document System & Virtual Pagination Engine for React, Tailwind CSS and CSS Paged Media",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/doccn.cjs",
+  "module": "./dist/doccn.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/doccn.js",
+      "require": "./dist/doccn.cjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "bin": {
+    "doccn": "./bin/doccn.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "bin",
+    "README.md"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "build:lib": "vite build --config vite.config.lib.ts && tsc -p tsconfig.lib.json",
+    "prepublishOnly": "bun run build:lib",
+    "lint": "oxlint",
+    "preview": "vite preview",
+    "doccn": "bun run src/cli/doccn.ts"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "lucide-react": "^1.31.0",
+    "tailwind-merge": "^3.6.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/node": "^26.2.0",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.4",
+    "oxlint": "^1.75.0",
+    "tailwindcss": "^4.3.3",
+    "typescript": "~6.0.2",
+    "vite": "^8.2.0"
+  }
+}

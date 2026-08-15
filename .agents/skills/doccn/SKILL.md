@@ -15,9 +15,9 @@ Use this skill whenever the user asks to create, style, format, paginate, or exp
 ## 1. Quick Installation for User Projects
 
 ```bash
-bun add @srsergio/doccn
+bun add @srsergio/doccn@1.0.0
 # or
-npm install @srsergio/doccn
+npm install @srsergio/doccn@1.0.0
 ```
 
 ---
